@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.weatherapp.ui.searchfragment.SearchFragment"
+        android:name="com.example.weatherapp.ui.search.SearchFragment"
         android:label="SearchFragment" />
 </navigation>
