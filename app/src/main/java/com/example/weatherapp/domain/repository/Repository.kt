@@ -1,4 +1,4 @@
-package com.example.weatherapp.data.repository
+package com.example.weatherapp.domain.repository
 
 import com.example.weatherapp.data.remote.RemoteDataSource
 import com.example.weatherapp.data.remote.safeApiCall

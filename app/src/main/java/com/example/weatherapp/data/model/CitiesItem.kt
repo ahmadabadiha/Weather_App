@@ -6,5 +6,5 @@ data class CitiesItem(
     val local_names: LocalNames,
     val lon: Double,
     val name: String,
-    val state: String
+    val state: String?
 )
