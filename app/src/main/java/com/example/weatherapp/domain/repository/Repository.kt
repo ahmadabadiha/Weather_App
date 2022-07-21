@@ -9,4 +9,8 @@ class Repository @Inject constructor(private val remoteDataSource: RemoteDataSou
     suspend fun searchCities(query: String) = safeApiCall {
         remoteDataSource.searchCity(query)
     }
+
+    suspend fun getWeatherInfo(lat: Float, lon: Float) = safeApiCall {
+        remoteDataSource.getWeatherInfo(lat, lon)
+    }
 }
