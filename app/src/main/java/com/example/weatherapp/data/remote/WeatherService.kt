@@ -11,7 +11,6 @@ interface WeatherService {
     suspend fun searchCity(
         @Query("q") query: String,
         @Query("limit") limit: Int = 10,
-        @Query("appid") appId: String = APP_ID
+        @Query("appid") appId: String = API_KEY
     ): Response<List<CitiesItem>>
-
 }

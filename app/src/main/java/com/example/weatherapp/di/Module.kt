@@ -4,7 +4,8 @@ import com.example.weatherapp.data.remote.BASE_URL
 import com.example.weatherapp.data.remote.RemoteDataSource
 import com.example.weatherapp.data.remote.RetrofitDataSource
 import com.example.weatherapp.data.remote.WeatherService
-import com.example.weatherapp.data.repository.Repository
+import com.example.weatherapp.domain.UseCases.SearchCityUseCase
+import com.example.weatherapp.domain.repository.Repository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,6 +29,10 @@ object Module {
     @Singleton
     @Provides
     fun provideRepository(remoteDataSource: RemoteDataSource): Repository = Repository(remoteDataSource)
+
+    @Singleton
+    @Provides
+    fun provideSearchCityUseCase(repository: Repository) = SearchCityUseCase(repository)
 
     @Singleton
     @Provides
