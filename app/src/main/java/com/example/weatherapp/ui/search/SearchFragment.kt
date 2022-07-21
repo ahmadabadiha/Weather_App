@@ -8,6 +8,7 @@ import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.weatherapp.R
 import com.example.weatherapp.data.model.CitiesItem
 import com.example.weatherapp.data.remote.ResultWrapper
@@ -72,7 +73,12 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     }
 
     private fun onCityItemClick(cityItem: CitiesItem) {
-
+        findNavController().navigate(
+            SearchFragmentDirections.actionSearchFragmentToPrimaryWeatherFragment(
+                cityItem.lat.toFloat(),
+                cityItem.lon.toFloat()
+            )
+        )
     }
 
     override fun onDestroy() {

@@ -2,6 +2,7 @@ package com.example.weatherapp.data.remote
 
 import android.provider.UserDictionary.Words.APP_ID
 import com.example.weatherapp.data.model.CitiesItem
+import com.example.weatherapp.data.model.WeatherResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -13,4 +14,13 @@ interface WeatherService {
         @Query("limit") limit: Int = 10,
         @Query("appid") appId: String = API_KEY
     ): Response<List<CitiesItem>>
+
+    @GET("https://api.openweathermap.org/data/2.5/onecall")
+    suspend fun getWeatherInfo(
+        @Query("lat") lat: Float,
+        @Query("lon") lon: Float,
+        @Query("units") unit: String = "metric",
+        @Query("exclude") exclude: String = "minutely,hourly,alerts",
+        @Query("appid") appId: String = API_KEY
+    ): Response<WeatherResponse>
 }
