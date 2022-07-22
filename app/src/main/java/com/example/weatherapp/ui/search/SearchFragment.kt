@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.weatherapp.R
 import com.example.weatherapp.data.model.CitiesItem
@@ -15,8 +14,6 @@ import com.example.weatherapp.data.remote.ResultWrapper
 import com.example.weatherapp.databinding.FragmentSearchBinding
 import com.example.weatherapp.ui.collectFlow
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class SearchFragment : Fragment(R.layout.fragment_search) {

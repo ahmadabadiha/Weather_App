@@ -3,7 +3,7 @@ package com.example.weatherapp.di
 import com.example.weatherapp.data.remote.RemoteDataSource
 import com.example.weatherapp.data.remote.RetrofitDataSource
 import com.example.weatherapp.data.remote.WeatherService
-import com.example.weatherapp.domain.UseCases.SearchCityUseCase
+import com.example.weatherapp.domain.usecases.SearchCityUseCase
 import com.example.weatherapp.domain.repository.Repository
 import dagger.Module
 import dagger.Provides
@@ -13,7 +13,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 
