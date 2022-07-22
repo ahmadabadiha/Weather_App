@@ -6,10 +6,12 @@
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/city_background.xml" value="0.1705" />
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/current_weather_background.xml" value="0.2625" />
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/search_background.xml" value="0.164" />
+        <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/weather_details_background.xml" value="0.131" />
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/weekly_forecast_layout.xml" value="0.1595" />
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_primary_weather.xml" value="0.25" />
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_search.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_weather_details.xml" value="0.33" />
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/search_result.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/NP/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/weekday_layout.xml" value="0.36614583333333334" />
       </map>

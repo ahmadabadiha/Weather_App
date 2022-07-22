@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pink">
+    android:background="@color/pink"
+    android:animateLayoutChanges="true">
 
     <ImageView
         android:id="@+id/cityIcon"
@@ -48,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="Current Weather"
+                android:text="@string/current_weather"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -85,7 +86,7 @@
                 android:layout_margin="4dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="@+id/temp"
                 app:layout_constraintStart_toStartOf="@+id/temp"
                 app:layout_constraintTop_toBottomOf="@+id/temp"
@@ -163,7 +164,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16sp"
+        android:layout_marginVertical="16dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/weeklyTitle" />
@@ -182,4 +183,10 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/weather"
         app:lottie_repeatMode="restart" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/loadedResultsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="currentWeatherView,weeklyTitle,recyclerView"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

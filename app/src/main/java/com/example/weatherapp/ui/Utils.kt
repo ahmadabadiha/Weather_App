@@ -17,3 +17,7 @@ inline fun <T> Fragment.collectFlow(flow: Flow<T>, crossinline action: (T) -> Un
         }
     }
 }
+
+fun convertToTempString(temp: Double): String{
+    return "$temp°"
+}
