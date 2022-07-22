@@ -2,4 +2,12 @@
     <string name="app_name">Weather App</string>
     <string name="search_any_place_in_the_world">Search any place in the world</string>
     <string name="weekly_forecast">Weekly forecast</string>
+    <string name="current_weather">Current Weather</string>
+    <string name="morning">Morning</string>
+    <string name="day">Day</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind(m/s)</string>
+    <string name="uv_index">UV index</string>
 </resources>

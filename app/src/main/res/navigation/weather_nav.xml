@@ -10,12 +10,37 @@
         android:label="SearchFragment" >
         <action
             android:id="@+id/action_searchFragment_to_primaryWeatherFragment"
-            app:destination="@id/primaryWeatherFragment" />
+            app:destination="@id/primaryWeatherFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/primaryWeatherFragment"
         android:name="com.example.weatherapp.ui.primaryweather.PrimaryWeatherFragment"
         android:label="PrimaryWeatherFragment" >
+        <argument
+            android:name="lat"
+            app:argType="float" />
+        <argument
+            android:name="lon"
+            app:argType="float" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_primaryWeatherFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.example.weatherapp.ui.weatherDetails.WeatherDetailsFragment"
+        android:label="WeatherDetailsFragment" >
         <argument
             android:name="lat"
             app:argType="float" />

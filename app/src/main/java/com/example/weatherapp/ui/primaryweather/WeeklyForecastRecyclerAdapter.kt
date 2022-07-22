@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.weatherapp.data.model.Daily
 import com.example.weatherapp.databinding.WeekdayLayoutBinding
+import com.example.weatherapp.ui.convertToTempString
 
 
-class WeeklyForecastRecyclerAdapter(private val onClick: (dailyForecast: Daily) -> Unit) :
+class WeeklyForecastRecyclerAdapter(private val doOnClick: (index: Int) -> Unit) :
     ListAdapter<Daily, WeeklyForecastRecyclerAdapter.WeekdayViewHolder>(
         WeeklyForecastDiffCallback()
     ) {
@@ -20,6 +21,7 @@ class WeeklyForecastRecyclerAdapter(private val onClick: (dailyForecast: Daily) 
 
 
         fun fill(item: Daily) {
+
             binding.apply {
                 val icon = item.weather[0].icon
                 Glide.with(itemView).load("http://openweathermap.org/img/wn/$icon@2x.png").into(weatherIcon)
@@ -28,9 +30,9 @@ class WeeklyForecastRecyclerAdapter(private val onClick: (dailyForecast: Daily) 
                 val receivedDate = java.util.Date(item.dt.toLong() * 1000)
                 weekday.text = dayOfWeek.format(receivedDate)
                 date.text = dayOfMonth.format(receivedDate)
-                temp.text = item.temp.day.toString() + "°"
+                temp.text = convertToTempString(item.temp.day)
             }
-            itemView.setOnClickListener { onClick(item) }
+            itemView.setOnClickListener { doOnClick(layoutPosition) }
         }
     }
 
