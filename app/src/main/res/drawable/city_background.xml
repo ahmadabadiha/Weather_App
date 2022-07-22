@@ -3,7 +3,7 @@
     <corners android:radius="48dp" />
     <gradient
         android:endColor="@color/white"
-        android:startColor="@color/purple"
+        android:startColor="@color/blue"
         android:type="linear" />
     <stroke
         android:width="4dp"

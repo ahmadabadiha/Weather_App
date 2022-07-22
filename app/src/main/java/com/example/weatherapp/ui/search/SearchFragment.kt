@@ -76,7 +76,8 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         findNavController().navigate(
             SearchFragmentDirections.actionSearchFragmentToPrimaryWeatherFragment(
                 cityItem.lat.toFloat(),
-                cityItem.lon.toFloat()
+                cityItem.lon.toFloat(),
+                cityItem.name
             )
         )
     }
