@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.weatherapp.data.model.CitiesItem
 import com.example.weatherapp.databinding.SearchResultBinding
 
-class SearchResultsRecyclerAdapter(private val onClick: (product: CitiesItem) -> Unit) :
+class SearchResultsRecyclerAdapter(private val onClick: (city: CitiesItem) -> Unit) :
     ListAdapter<CitiesItem, SearchResultsRecyclerAdapter.ResultViewHolder>(
         SearchResultDiffCallback()
     ) {
