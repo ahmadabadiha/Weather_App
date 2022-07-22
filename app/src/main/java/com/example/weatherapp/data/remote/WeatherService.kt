@@ -15,7 +15,7 @@ interface WeatherService {
         @Query("appid") appId: String = API_KEY
     ): Response<List<CitiesItem>>
 
-    @GET("https://api.openweathermap.org/data/2.5/onecall")
+    @GET("data/2.5/onecall")
     suspend fun getWeatherInfo(
         @Query("lat") lat: Float,
         @Query("lon") lon: Float,

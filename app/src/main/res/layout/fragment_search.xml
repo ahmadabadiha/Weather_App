@@ -48,7 +48,7 @@
         android:text="@string/search_any_place_in_the_world"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@color/purple"
+        android:textColor="@color/blue"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -22,6 +22,7 @@ class PrimaryWeatherViewModel @Inject constructor(
 
     private val lat get() = savedStateHandle.get<Float>("lat")!!
     private val lon get() = savedStateHandle.get<Float>("lon")!!
+    val cityName get() = savedStateHandle.get<String>("cityName")!!
 
     private val _weatherResults = MutableStateFlow<ResultWrapper<WeatherResponse>>(ResultWrapper.Loading)
     val weatherResults = _weatherResults.asStateFlow()

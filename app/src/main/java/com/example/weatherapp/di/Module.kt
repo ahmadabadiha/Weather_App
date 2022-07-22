@@ -1,6 +1,5 @@
 package com.example.weatherapp.di
 
-import com.example.weatherapp.data.remote.BASE_URL
 import com.example.weatherapp.data.remote.RemoteDataSource
 import com.example.weatherapp.data.remote.RetrofitDataSource
 import com.example.weatherapp.data.remote.WeatherService
@@ -53,7 +52,7 @@ object Module {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient, gsonConverterFactory: GsonConverterFactory): Retrofit = Retrofit.Builder()
         .addConverterFactory(gsonConverterFactory)
-        .baseUrl(BASE_URL)
+        .baseUrl("https://api.openweathermap.org/")
         .client(okHttpClient)
         .build()
 
