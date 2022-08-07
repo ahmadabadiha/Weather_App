@@ -54,7 +54,6 @@ class PrimaryWeatherFragment : Fragment(R.layout.fragment_primary_weather) {
         binding.recyclerView.adapter = weeklyForecastRecyclerAdapter
     }
 
-
     private fun initCollectFlowResults() {
         collectFlow(viewModel.weatherResults) {
             when (it) {
