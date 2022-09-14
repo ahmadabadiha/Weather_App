@@ -21,7 +21,7 @@ class SearchResultsRecyclerAdapter(private val onClick: (city: CitiesItem) -> Un
             binding.apply {
                 cityTV.text = item.name
                 if (item.state != null)
-                    stateTV.text = item.state + ", " + item.country
+                    (item.state + ", " + item.country).also { stateTV.text = it }
                 else
                     stateTV.text = item.country
             }

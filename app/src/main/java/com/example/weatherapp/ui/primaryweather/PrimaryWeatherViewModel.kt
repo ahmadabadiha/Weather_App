@@ -16,8 +16,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PrimaryWeatherViewModel @Inject constructor(
-    val savedStateHandle: SavedStateHandle,
-    val getWeatherUseCase: GetWeatherUseCase
+    private val savedStateHandle: SavedStateHandle,
+    private val getWeatherUseCase: GetWeatherUseCase
 ) : ViewModel() {
 
     val lat get() = savedStateHandle.get<Float>("lat")!!
